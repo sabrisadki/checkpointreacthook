@@ -1,23 +1,23 @@
 import React from 'react';
 import MovieCard from './MovieCard';
 import movies from './movieData';
-
-
-
-// Rest of your component code...
-
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const MovieList = () => {
   return (
-    <>
-    <h4 style={{ color:'blue'}}>Movies List</h4> <br />
-    <div style={{ display: 'flex' }}>
-      
-      {movies.map((movie, index) => (
-        <MovieCard key={index} movie={movie} />
-      ))}
-    </div>
-    </>
+    <Container>
+      <Row>
+        <Col xs='10'>
+              <h4 style={{ color:'blue'}}>Movies List</h4> <br />
+                    <div style={{ display: 'flex' }}>
+                      
+                      {movies.map((movie, index) => (<MovieCard key={index} movie={movie} /> ))}
+                    </div>
+        </Col>
+      </Row>
+    </Container>
     );
 };
 

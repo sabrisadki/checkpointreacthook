@@ -6,7 +6,7 @@ const PodcastList = () => {
   return (
     <>
     <h4 style={{color:'blue'}}>Podcasts List</h4>
-    <div style={{ display: 'flex' }}>
+    <div style={{ display: 'flex',flex:'wrap' }}>
       {podcasts.map((podcast, index) => (
         <PodcastCard key={index} podcast={podcast} />
       ))}

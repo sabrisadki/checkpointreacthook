@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Navbar from './Component/Navbar';
+import Navbarr from './Component/Navbar';
 import Footer from './Component/Footer';
 import MovieList from './Component/Movies/MovieList';
 import MovieFilter from './Component/Movies/MoviesFilter';
@@ -50,7 +50,7 @@ const App = () => {
   return (
     <div className="app">
       {/* Navbar */}
-      <Navbar />
+      <Navbarr />
 
       {/* Movie Section */}
       <h2>Movies</h2>

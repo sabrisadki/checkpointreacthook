@@ -1,16 +1,21 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 const SeriesCard = ({ series }) => {
   const { title, description, posterURL, rating } = series;
 
   return (
-    <div className="series-card">
-      <h3>{title}</h3>
-      
-      <img src={posterURL} alt={title} />
-      <p>Rating: {rating}</p>
-      <p>{description}</p>
-    </div>
+    <Card style={{ width: '18rem' }}>
+    <Card.Img variant="top" src={posterURL} />
+    <Card.Body>
+      <Card.Title>{title}<br /> rating: {rating}</Card.Title>
+      <Card.Text>
+        {description} 
+      </Card.Text>
+      <Button variant="primary">Watch</Button>
+    </Card.Body>
+  </Card>
   );
 };
 
